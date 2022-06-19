@@ -8,6 +8,6 @@
 
 @media (max-width: 560px){
   .moviesGrid{
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(auto-fill, 50%);
   }
 }
