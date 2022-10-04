@@ -18,7 +18,7 @@ export function MoviesGrid({ search }) {
     useEffect(() => {
         setIsLoading(true);
         const searchUrl = search
-            ? "/search/movie?query=" + search + "&page" + page
+            ? "/search/movie?query=" + search + "&page=" + page
             : "/discover/movie?page=" + page;
         get(searchUrl).then((data) => {
             setMovies((prevMovies) => prevMovies.concat(data.results));

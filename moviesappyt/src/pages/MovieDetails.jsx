@@ -31,7 +31,7 @@ export function MovieDetails () {
         <p><strong>Genres: </strong>{movie.genres.map(genre => genre.name).join(", ")}</p>
         <p><strong>Description: </strong>{movie.overview} </p>
       </div>
-      Details
+      {/* Details */}
     </div>
   )
 }
