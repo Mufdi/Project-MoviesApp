@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import { useState, useEffect } from 'react'
 import { get } from '../utils/httpClient.js'
 import { Spinner } from '../components/Spinner.jsx'
+import { getMovieImg } from '../utils/getMovieImg'
 
 export function MovieDetails () {
   const { movieId } = useParams()
@@ -22,7 +23,7 @@ export function MovieDetails () {
 
   if (isLoading) return <Spinner />
 
-  const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path
+  const imageUrl = getMovieImg(movie.poster_path, 500)
   return (
     <div className={styles.detailsContainer}>
       <img className={`${styles.col} ${styles.movieImage}`} src={imageUrl} alt={movie.tite} />
